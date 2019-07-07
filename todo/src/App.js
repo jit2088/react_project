@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import TodoItem from "./TodoItem"
+import todosData from "./todosData"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App(){
+
+
+    //const productsComponents = vschoolProducts.map(item=> <Product key= {item.id} name= {item.name} price = {item.price} description = {item.description}/>)
+    const todosItems = todosData.map(item => <TodoItem key = {item.id} item ={item}/>) 
+    
+
+    
+
+
+    return (
+        <div>
+            {todosItems}
+        </div>
+        
+    )
+
 }
 
-export default App;
+export default App
